@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    background-image: url('https://images.unsplash.com/photo-1517330283827-2527c57981ad?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJhY2tncm91bmQlMjBsb3ZlfGVufDB8fDB8fHww');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background covers the entire page */
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers vertically */
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    transform: translate(-50%, -50%); /* Moves the div back by half its width and height */
+    top: 50%;
+    left: 50%;
+}
+#animatedImage {
+    display: block;
+    max-width: 100%; /* Make sure the image doesn't overflow */
+    height: 50px; /* Maintain aspect ratio */
+    margin-top: 200px;
+}
+

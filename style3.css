@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-image: url('https://i.pinimg.com/originals/6d/e9/58/6de958d97ef55b19d28e7df79e8c9f21.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between text elements and button */
+}
+
+.hypnotic-text {
+    color: white; /* Text color */
+    font-weight: bold; /* Make text bold */
+    padding: 10px; /* Space around text */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Rounded corners for the background */
+    margin: 0; /* Remove default margins */
+}
+
+.hypnotic-button {
+    background: linear-gradient(45deg, #ff5f6d, #ffc371); /* Gradient background */
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Large padding for emphasis */
+    font-size: 20px; /* Large font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Strong shadow for 3D effect */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    z-index: 1; /* Ensure button is on top of other elements */
+}
+
+.hypnotic-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay effect */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+.hypnotic-button:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+    background: linear-gradient(45deg, #ff7e7e, #ffb085); /* Slightly different gradient on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+}
+
+.hypnotic-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hypnotic-button:active {
+    transform: scale(0.95); /* Slightly smaller on click */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Less shadow on click */
+}
